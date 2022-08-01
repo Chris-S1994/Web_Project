@@ -1,0 +1,146 @@
+*{padding: 0; margin: 0}
+body{
+    background-image: url("image/绿色园景插图.png"),url("image/你的名字大-竖.jpeg");
+    background-repeat: no-repeat,no-repeat;
+    background-size: 30%,100% 100%;
+
+    }
+
+/*顶部切图展示*/
+.box-top1{background-color: rgba(0,0,0,0.4); width: 875px; height: 500px;/* margin-left:auto; margin-right: auto;*/
+    overflow: hidden;position: relative; left: 50%; transform:translate(-50%,0)}
+
+#all-picture{height:480px;
+    width: calc(875px * 5);/*如果加图片自行添加数目我这里5张图片所以宽度为5张图片横排的总尺寸，注意添加图片数目之后，动画内的参数也要相应的改变*/
+    animation: switch ease 15s infinite ;z-index: 2;opacity: 0.7}
+#all-picture img{width:875px;height: 480px;float: left;}
+#all-picture:hover{animation-play-state: paused;}
+@keyframes switch{/*每个图片切换有两个阶段：位移切换和静置。所以中间的效果可以任意定制，我这里在每个阶段切换时都有一定的时间来静置*/
+    0%,10%{margin-left: 0;}
+    20%,30%{margin-left: -875px;}
+    40%,50%{margin-left: -1750px;}
+    60%,70%{margin-left: -2625px;}
+    80%,90%{margin-left: -3500px;}
+    100%{margin-left: 0px;}
+}
+@keyframes picture1{
+    0%{margin-left: -3500px;}
+    100%{margin-left: 0px;}
+}
+@keyframes picture2{
+    0%{margin-left: 0px;}
+    100%{margin-left: -875px}
+}
+@keyframes picture3{
+    0%{margin-left: -875px;}
+    100%{margin-left:-1750px}
+}
+@keyframes picture4{
+    0%{margin-left: -1750px;}
+    100%{margin-left:-2625px}
+}
+@keyframes picture5{
+    0%{margin-left: -2625px;}
+    100%{margin-left:-3500px}
+}
+#a1:hover ~ #all-picture{animation: picture1 ease 0.5s forwards;}
+#a2:hover ~ #all-picture{animation: picture2 ease 0.5s forwards;}
+#a3:hover ~ #all-picture{animation: picture3 ease 0.5s forwards;}
+#a4:hover ~ #all-picture{animation: picture4 ease 0.5s forwards;}
+#a5:hover ~ #all-picture{animation: picture5 ease 0.5s forwards;}
+.num1{width: 175px;height: 20px;position: absolute;top:480px;left: 0px;}
+.num2{width: 175px;height: 20px;position: absolute;top:480px;left: 175px;}
+.num3{width: 175px;height: 20px;position: absolute;top:480px;left: 350px;}
+.num4{width: 175px;height: 20px;position: absolute;top:480px;left: 525px;}
+.num5{width: 175px;height: 20px;position: absolute;top:480px;left: 700px;}
+.num1,.num2,.num3,.num4,.num5{text-align: center;line-height: 20px;}
+.box-top1 a:hover{background-color: burlywood;opacity:1;color: lightgoldenrodyellow ;font-size: large;font-weight: bolder;}
+.box-top1 a{opacity:0.4;color:white;background-color: #000000;}
+.box-top1 a:hover ~ #all-picture:hover{animation-play-state: paused;}
+/*导航索引列表*/
+.box-index{ width: 875px;height: 49px; position: relative; left: 50%;transform:translate(-50%,0);}
+.box-index .aa{width: 175px; float: left}
+.box-index .aa .bb{background-color: rgba(72,61,139,0.7);border-style:solid ;border-top-width: 2px;
+    ;border-bottom-width:2px;border-left-width: 3px;border-right-width: 3px;border-color: whitesmoke;
+    width: 169px; height: 45px;line-height: 45px;text-align: center; font-size: 19px;
+    color: rgb(225 212 163);letter-spacing: 4px;}
+.box-index .aa .cc{background-color: lightseagreen; width: 175px;height: 0;transition: height 0.3s;
+    position: absolute;overflow: hidden}
+.box-index .aa .cc ul{ list-style: none;}
+.box-index .aa .cc ul li{ height:45px;line-height: 45px; width: 175px;text-align: center;letter-spacing: 4px}
+.box-index .aa .cc a{ text-decoration: none; font-size: 18px;color: white;display: block}
+.box-index .aa:hover{ cursor: pointer; }
+.box-index .aa:hover .cc{ height: 225px }
+.box-index .aa:hover .bb{ background-color: green; }
+.box-index .aa .cc li:hover{ background-color: gray;opacity:1;font-size: large;font-weight: bolder}
+.box-news{width: 875px;height: 340px; position: relative;
+    left: 50%;transform:translate(-50%,0);z-index: -1;}
+.box-news .news1{width: 280px; height: 330px;background-color: rgba(244,244,244,0.5);
+    padding:5px; float: left;}
+.box-news ul{list-style: none}
+.box-news li{line-height: 24px;text-align:justify;text-indent: 2.1em;background-image: url("icon/jiantou.png");
+    background-repeat: no-repeat;background-position: left 10px top 2px; background-size: 22px;}
+.box-news h2{text-indent: 0.5em;color: #181818;line-height: 38px}
+.box-news .news2{width: 280px; height: 330px;background-color: rgba(40,178,175,0.5);
+    padding:5px; float: left;}
+.box-news .news3{width: 285px; height: 330px;background-color: rgba(244,244,244,0.5);
+    padding:5px; float: right;}
+.video_div{width: 875px;height: 560px;position: relative; left: 50%;transform:translate(-50%,0)}
+.video_title{width: 875px;height: 50px; padding-top: 5px;padding-bottom: 5px; background-color: rgba(238,232,170,0.6)}
+.video_title h1{color: #181818; position: absolute; left:80px;  line-height: 50px}
+.video_title img{ position: absolute; left: 13px}
+.video_place{width: 875px;height: 500px}
+.photo_div{width: 875px;height: 480px;position: relative; left: 50%;transform:translate(-50%,0)}
+.photo_title{width: 875px;height: 50px;padding-top: 5px;padding-bottom: 5px; background-color: rgba(238,232,170,0.6)}
+.photo_title h1{color: #181818; position: absolute; left:80px;  line-height: 50px}
+.photo_title img{position: absolute; left: 13px}
+.photo_place{background-color: rgba(244,244,244,0.3);width: 875px;height: 420px}
+.photo_place .a1{display: block;margin: 10px 10px 10px 20px ;float: left}
+.photo_place .a2{display: block;margin: 10px 20px 10px 10px ;float: left}
+.footer_title{width: 875px;height: 50px;position: relative; left: 50%;transform:translate(-50%,0);padding-top: 5px;
+    padding-bottom: 5px; background-color: rgba(238,232,170,0.6)}
+.footer_title h1{color: #181818; position: absolute; left:80px;  line-height: 50px}
+.footer_title img{position: absolute; left: 13px}
+#footer_b {
+    background-color: rgba(240,240,240,0.3);
+    height: 160px;
+    position: relative;
+    left: 50%;
+    transform:translate(-50%,0);
+    width: 875px;
+    overflow: hidden;
+}
+#footer_b .item_left{ width:411px; height:130px; margin: 13px 13px;float: left}
+#footer_b .item_right{ width:411px; height:130px; margin: 13px 13px;float: left}
+#footer_b .item_left p{text-indent: 1.8em;line-height: 30px;font-size: 17px}
+#footer_b .item_right p{text-indent: 1.25em;line-height: 30px;font-size: 17px}
+#footer_b .item_left span{color: darkslategray;font-size: 20px;text-indent: 1.5em;display:block;line-height: 40px;
+    ;font-weight: bold;letter-spacing: 1px}
+#footer_b .item_right span{color: darkslategray;font-size: 20px;text-indent: 1em;display:block;line-height: 40px;
+    ;font-weight:bold; letter-spacing: 1px}
+#footer {
+    background-color: rgba(244,244,244,0.7);
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    left: 50%;
+    transform:translate(-50%,0);
+    width: 875px;
+    text-align: center ;
+    color: #050505;
+    font-family: Arial;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+#click_img{position: absolute; right: 35px;top:220px}
+#click_text{color: palegoldenrod;font-size: 19px;font-weight: bold;position: absolute; right: 90px;top:196px;
+    letter-spacing: 2px}
+#float_div {
+    position: absolute;
+    z-index: 1;
+    margin-left: 2px;
+}
+#float_img {
+    width: 270px;
+    height: 415px;
+}
