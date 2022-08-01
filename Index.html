@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width",initial-scale="1.0">
+    <title>尚优选PC端Web项目-橙子</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/Index.css">
+</head>
+<body>
+    <!-- 最外层包裹元素 -->
+    <div id="wrap">
+        <header id="header">
+            <div class="link1">
+                <a href="Index_web/Index.html">点击进入橙子导航</a>
+            </div>
+            <div class="link2">
+                <a href="响应式Qinshiweb/Index.html">点击进入橙子动画</a>
+            </div>
+            <!-- 上部分 -->
+            <div class="headTop">
+                <!-- 上部分主页面 -->
+                <div class="headTopMain">
+                    <div class="left">
+                        <h5>欢迎来到尚优选！请先</h5>
+                        <p>
+                            <a href="#">登录</a>
+                            <a href="#">注册</a>
+                        </p>
+                    </div>
+                    <div class="right">
+                        <nav>
+                            <a href="#">我的订单</a>
+                            <a href="#">我的购物车</a>
+                            <a href="#">我的尚优选</a>
+                            <a href="#">会员中心</a>
+                            <a href="#">关注尚优选</a>
+                            <a href="#">合作招商</a>
+                            <a href="#">商家后台</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- 下部分 -->
+            <div class="headBottom">
+                <div class="headBottomMain">
+                    <div class="logo">
+                        <a href="https://www.taobao.com/">
+                            <img src="image/logo.png" alt="这里有一张图片">
+                        </a>
+                    </div>
+                    <div class="search" >
+                        <form name="search" action="submit.htm" >
+                            <input type="text" placeholder="请输入搜索内容">
+                            <input type="submit" value="搜索">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- 头部结束 -->
+        <!-- 分类导航开始 -->
+        <div id="navWrap">
+            <!-- 版心元素 -->
+            <div class="navWrapMain">
+                <a href="#">全部商品分类</a>
+                <a href="#">服装城</a>
+                <a href="#">美妆馆</a>
+                <a href="#">尚优选超市</a>
+                <a href="#">全球购</a>
+                <a href="#">闪购</a>
+                <a href="#">团购</a>
+                <a href="#">趣购</a>
+                <a href="#">秒杀活动</a>
+            </div>
+        </div>
+        <!-- 分类导航结束 -->
+        <!-- 内容区域开始 -->
+        <div id="content">
+            <!-- 版心元素 -->
+            <div class="contentMain">
+                <!-- 路径导航 -->
+                <div id="navPath">
+                    <!--<a href="#">手机、数码、通讯</a>
+                    <i>/</i>
+                    <a href="#">手机</a>
+                    <i>/</i>
+                    <a href="#">华为</a>
+                    <i>/</i>
+                    <a>P40系列</a>-->
+                </div>
+                <!-- 中间区域 -->
+                <div id="center">
+                    <!-- 左侧放大镜预览 -->
+                    <div id="leftView">
+                        <!-- 上部 -->
+                        <div id="leftTop">
+                            <!-- 小图框 -->
+                            <div id="smallPic">
+                                <img src="image/b1.webp" alt="这里有一张图片">
+                                <!--<div class="mask"></div>  蒙版元素 -->
+                            </div>
+                            <!-- 大图框 -->
+                            <!--<div id="bigPic">
+                                <img src="image/b1.webp" alt="b1">
+                            </div>-->
+                        </div>
+                        <!-- 下部 -->
+                        <div id="leftBottom">
+                            <a class="prev"> < </a>
+                            <div id="piclist">
+                                <ul>
+                                </ul>
+                            </div>
+                            <a class="next"> > </a>
+                        </div>
+                    </div>
+                    <!-- 右侧商品详情区域 -->
+                    <div id="rightView">
+                        <!-- 商品详情数据结构开始 -->
+                        <div class="rightTop"></div>
+                        <!-- 商品参数数据结构开始 -->
+                        <div class="rightBottom">
+                            <!-- 选择之后结果的区域 -->
+                            <div class="choose"></div>
+                            <!-- 商品参数的选择区域 -->
+                            <div class="chooseWrap"></div>
+                            <!-- 购物车区域 -->
+                            <div class="addCart">
+                                <div class="count">
+                                    <input type="text" value="0">
+                                    <a onclick="NumberAdd()">+</a>
+                                    <a onclick="NumberSub()">-</a>
+                                </div>
+                                <button>加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 商品详情页中间部分 -->
+                <div class="goodsDetailWrap">
+                    <!--左边的侧边栏-->
+                    <aside class="leftAside">
+                        <!--上边-->
+                        <div class="asideTop">
+                            <h3 class="active">相关分类</h3>
+                            <h3>推荐品牌</h3>
+                        </div>
+                        <!--下边-->
+                        <div class="aslideContent">
+                            <div class="active">
+                                <ul class="goodslist1">
+                                    <li>手机</li>
+                                    <li>手机壳</li>
+                                    <li>内存卡</li>
+                                    <li>手机配件</li>
+                                    <li>贴膜</li>
+                                    <li>手机耳机</li>
+                                    <li>移动电源</li>
+                                    <li>平板电脑</li>
+                                </ul>
+                                <ul class="goodslist2">
+                                    <li>
+                                        <img src="image/part01.png" alt="">
+                                        <span>移动电源通用(A1699)</span>
+                                        <p>¥98.00</p>
+                                        <div class="button">
+                                            <a href="javascript:;">加入购物车</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="image/part02.webp" alt="">
+                                        <span>华为66W多协议双向超级快充移动电源</span>
+                                        <p>¥329.00</p>
+                                        <div class="button">
+                                            <a href="javascript:;">加入购物车</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="image/part03.webp" alt="">
+                                        <span>华为多协议超级快充移动电源10000(22.5W)</span>
+                                        <p>¥129</p>
+                                        <div class="button">
+                                            <a href="javascript:;">加入购物车</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="image/part04.webp" alt="">
+                                        <span>华为立式无线超级快充电源 CP62R(Max50W)</span>
+                                        <p>¥389</p>
+                                        <div class="button">
+                                            <a href="javascript:;">加入购物车</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>推荐品牌</div>
+                        </div>
+                    </aside>
+                    <!--右边的结构-->
+                    <div class="rightDetail">
+                        <div class="chooseBox">
+                            <h3>选择搭配</h3>
+                            <div class="listWrap">
+                                <div class="left">
+                                    <img src="image/item_phone.jpg" alt="">
+                                    <p>￥5988</p>
+                                    <i>+</i>
+                                </div>
+                                <ul class="middle">
+                                    <li>
+                                        <img src="image/dp01.png" alt="">
+                                        <span>Feless费勒斯VR1</span>
+                                        <div>
+                                            <input type="checkbox" value="99">
+                                            <span>99</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="image/dp02.png" alt="">
+                                        <span>Feless费勒斯VR2</span>
+                                        <div>
+                                            <input type="checkbox" value="129">
+                                            <span>129</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="image/dp03.png" alt="">
+                                        <span>Feless费勒斯VR3</span>
+                                        <div>
+                                            <input type="checkbox" value="399">
+                                            <span>399</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="image/dp04.png" alt="">
+                                        <span>Feless费勒斯VR4</span>
+                                        <div>
+                                            <input type="checkbox" value="499">
+                                            <span>499</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="right">
+                                    <div>已购0件商品</div>
+                                    <p>套餐价</p>
+                                    <i>￥5988</i>
+                                    <div>
+                                        <button>加入购物车</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <!--选项卡开始-->
+                        <div class="BottomDetail">
+                            <!--菜单-->
+                            <ul class="tabBtns">
+                                <li class="active"><a href="javascript:;">商品介绍</a></li>
+                                <li><a href="javascript:;">规格包装</a></li>
+                                <li><a href="javascript:;">售后与保障</a></li>
+                                <li><a href="javascript:;">商品评价</a></li>
+                                <li><a href="javascript:;">手机社区</a></li>
+                            </ul>
+                            <!--内容-->
+                            <div class="tabContents">
+                                <div class="active">
+                                    <ul>
+                                        <li>分辨率：2640x1200(FHD)</li>
+                                        <li>后置摄像头：超感知徕卡四摄：5000万像素超感知摄像头（广角， f/1.9光圈，OIS光学防抖）+ 4000万像素电影摄像头（超广角，f/1.8光圈） + 1200万像素超感光长焦摄像头（f/3.4 光圈，OIS光学防抖） + 3D深感摄像头</li>
+                                        <li>前置摄像头：3200万像素摄像头（f/2.2光圈，自动对焦）+ 景深摄像头</li>
+                                        <li>核 数：8核</li>
+                                        <li>频 率：以官网信息为准</li>
+                                        <li>品牌： 华为</li>
+                                        <li>商品名称：华为P40Pro手机</li>
+                                        <li>商品编号：ELS-AN00</li>
+                                        <li>商品产地：中国大陆</li>
+                                        <li>商品毛重：198g</li>
+                                        <li>热点：3D识别，麒麟990(5G)，金属机身，超级影像</li>
+                                        <li>系统：Emui.11</li>
+                                        <li>毛重：0.3kg</li>
+                                        <li>机身内存：128GB</li>
+                                    </ul>
+                                    <img src="image/intro01.webp" alt="">
+                                    <img src="image/intro02.webp" alt="">
+                                    <img src="image/intro03.webp" alt="">
+                                    <img src="image/intro04.webp" alt="">
+                                </div>
+                                <div>规格包装</div>
+                                <div>售后与保障</div>
+                                <div>商品评价</div>
+                                <div>手机社区</div>
+                            </div>
+                        </div>
+                        <!--选项卡结束-->
+                    </div>
+                </div>
+                <!--商品详情中间部分结束-->
+            </div>
+        </div>
+        <!-- 内容区域结束 -->
+        <!--右侧侧边栏开始-->
+        <div class="rightAside asideClose">
+            <!--按钮区域-->
+            <div class="btns btnsClose"></div>
+            <!--侧边栏内容区域-->
+            <div class="content">欢迎光临~</div>
+            <!--侧边导航-->
+            <ul class="navlist">
+                <li>
+                    <!--小图标-->
+                    <p></p>
+                    <i>尚选会员</i>
+                </li>
+                <li>
+                    <!--小图标-->
+                    <p></p>
+                    <i>尚选会员</i>
+                </li>
+                <li>
+                    <!--小图标-->
+                    <p></p>
+                    <i>尚选会员</i>
+                </li>
+                <li>
+                    <!--小图标-->
+                    <p></p>
+                    <i>尚选会员</i>
+                </li>
+                <li>
+                    <!--小图标-->
+                    <p></p>
+                    <i>尚选会员</i>
+                </li>
+                <li>
+                    <!--小图标-->
+                    <p></p>
+                    <i>尚选会员</i>
+                </li>
+            </ul>
+        </div>
+        <!--右侧侧边栏结束-->
+        <hr>
+        <div id="footer">橙子先生 2022.07.31&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&copy;&nbsp;CopyRight@copy2022 </div>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
