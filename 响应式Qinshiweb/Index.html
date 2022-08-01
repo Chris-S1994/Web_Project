@@ -1,0 +1,360 @@
+<!--学习视频来源https://www.bilibili.com/video/av31073215-->
+<!DOCTYPE html>
+<html lang="zh-CN"><!--简体中文-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/><!--浏览器兼容性-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--viewport为了确保适当的绘制和触屏缩放。user-scalable=no禁用缩放功能后，
+    用户只能滚动屏幕，就能让你的网站看上去更像原生应用的感觉。-->
+    <title>秦时明月web项目</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrapcss.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <!--wow.min.js和animate.css组合使用-->
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <!--导航条 默认导航条  固定在顶部-->
+<div class="container">
+  <!--小屏幕导航以及Logo-->
+  <div class="navbar-header">
+  <button class="navbar-toggle"    data-toggle="collapse"      data-target=".navbar-collapse" >
+    <!--class="navbar-toggle 进行隐藏和显示之间的切换-->
+    <!--  toggle触发器   data-toggle="collapse"  与data-target使用折叠插件
+    .data -target属性接受一个CSS选择器，并会对其应用折叠效果。-->
+    <!--三个带有 class .icon-bar 的 <span> 创建所谓的汉堡按钮-->
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a href="http://qs.cy.com/" target="_blank" class="navbar-brand">秦时明月</a>
+  </div>
+  <!--小屏幕导航以及Logo-->
+  <!--导航-->
+
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-right">
+      <!--navbar-right 向右对齐导航栏中的组件。-->
+      <li><a href="#home">秦时明月之沧海横流</a></li>
+      <li><a href="#bbs">精彩图例</a></li>
+      <li><a href="#people">少司命</a></li>
+      <li><a href="#baifeng">白凤</a></li>
+      <li><a href="#course">最新视频</a></li>
+      <li><a href="#app">往季信息</a></li>
+      <li><a href="#contact">最新资讯</a></li>
+    </ul>
+  </div>
+  <!--导航-->
+</div>
+</nav>
+<!--home-->
+<section id="home"><!--栅格系统觉得不错的博客https://www.cnblogs.com/chessYu/p/7337018.html-->  <!--section区段-->
+  <div class="lvjing">
+    <div class="container">
+      <div class="row wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s" data-wow-iteration="1">
+        <!--给使用对象添加class="wow animate"  animate是http://daneden.github.io/animate.css/网站里面的效果
+        可用属性data-wow-duration（动画持续时间）  data-wow-delay（动画延迟时间）data-wow-offset（偏移量）
+        本动画距离可视区域多远开始执行动画     data-wow-iteration="10"(重复次数)-->
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <h1>秦时明月之沧海横流</h1>
+          <p>
+            《秦时明月之沧海横流》是国产大型3D动画《秦时明月》系列的第六部。<br/>
+            （故事背景取自秦始皇统一六国到咸阳城被攻陷这段英雄辈出的历史时期，是一部以武侠为主题的全民型动漫）
+          </p>
+          <img src="images/homecenter.jpeg"  class="img-responsive" width="70%" height="70%"  alt="这里有一张图片">
+          <!--class="img-responsive" 图片响应式-->
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--home-->
+<!--bbs-->
+<section id="bbs">
+    <div class="container">
+      <div class="row wow swing" data-wow-duration="1s">
+        <div class="col-md-4">
+          <a href="https://baike.so.com/doc/3332135-3509278.html" alt="秦时明月官网" target="_blank">
+          <img src="images/a.png"  class="img-responsive"  alt="秦时明月图">
+          <h3>精彩截图</h3>
+          <p>有些梦想虽然遥不可及，但不并是不可能实现，只要我足够的强。 </p>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="https://baike.so.com/doc/3332135-3509278.html" alt="秦时明月官网" target="_blank">
+          <img src="images/b.png"  class="img-responsive"  alt="秦时明月图">
+          <h3>精彩截图</h3>
+          <p>杀戮永远不是变强的理由,一个人,若以打败别人而证明自己,那他就已经输了.  </p>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="https://baike.so.com/doc/3332135-3509278.html" alt="秦时明月官网" target="_blank">
+          <img src="images/c.png"  class="img-responsive"  alt="秦时明月图">
+          <h3>精彩截图</h3>
+          <p>这个世上，胜者生，而败者亡，在世事的胜负面前，生与死不过是必然的因果。</p>
+          </a>
+        </div>
+      </div>
+    </div>
+</section>
+<!--bbs-->
+
+<!--people-->
+<section id="people">
+  <div class="container">
+    <div class="col-md-6 wow fadeInLeft">
+    <h2>少司命</h2>
+    <p>少司命，中国首部3D武侠动漫《秦时明月》系列中的职位</p>
+    <p><span class="glyphicon glyphicon-bell detail"></span>掌管五行派系中的木部，与云中君、大司命、
+      湘君、湘夫人并列阴阳家五大长老之一。</p>
+    <!--可以去网站https://v3.bootcss.com/组件里面找一个图标名称复制过来即可。-->
+    <p><span class="glyphicon glyphicon-bell detail"></span>传说她美若天仙，但这世上还没有人
+      见过她面纱之下的真正面目。自登场起就没有说过一句话，是一位迷之少女，阴阳功力相当雄厚。</p>
+  </div>
+  <div class="col-md-6 wow rotateIn">
+    <img src="images/1.jpg" class="img-responsive"  alt="少司命">
+  </div>
+
+  </div>
+</section>
+<!--people-->
+
+<!--baifeng-->
+<section id="baifeng">
+  <div class="container wow zoomIn">
+    <div class="col-md-6 ">
+      <img src="images/2.jpg" class="img-responsive"  alt="白凤">
+    </div>
+  <div class="col-md-6 ">
+    <h2>白凤</h2>
+    <p>白凤凰，又称白凤，中国3D武侠动画《秦时明月》系列中的原创男性角色</p>
+    <p><span class="glyphicon glyphicon-bell detail"></span>神秘优雅的白衣美男子，轻功举世无双，能够借助
+      鸟类或羽毛飞翔，时常驾驭着白色的巨鸟在天空飞过。</p>
+    <!--可以去网站https://v3.bootcss.com/组件里面找一个图标名称复制过来即可。-->
+    <p><span class="glyphicon glyphicon-bell detail"></span>天赋异禀，具有控制与指挥鸟类的能力，
+      被称为"百鸟之王"。加入以卫庄为首领的杀手组织"流沙"。</p>
+  </div>
+  </div>
+</section>
+<!--baifeng-->
+
+<section id="course">
+  <div class="container">
+    <div class="row wow wobble" >
+      <div class="col-md-12">
+        <h2>最新视频</h2>
+      </div>
+      <div class="col-md-3">
+        <div class="course" align="center" ><!--让图片与按钮居中-->
+          <img src="images/11.png" class="img-responsive" alt="">
+          <a href="https://neets.cc/detail/QYgqnh5qMaJLjVkJdY812W" class="btn btn-primary" target="_blank"  role="button">
+            <!--.btn	为按钮添加基本样式  .btn-primary	原始按钮样式（未被操作）-->
+            <!--role属性告诉辅助设备（如屏幕阅读器）这个元素所扮演的角色。增强组件的可访问性、可用性和可交互性-->
+            点击观看
+          </a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="course" align="center" >
+          <img src="images/22.png" class="img-responsive" alt="">
+          <a href="https://neets.cc/detail/XYs19SvxSeDoCLZDVFfbGA" class="btn btn-primary" target="_blank"  role="button">
+            点击观看
+          </a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="course" align="center" >
+          <img src="images/33.png" class="img-responsive" alt="">
+          <a href="https://neets.cc/detail/B8AJtV6ctxTTvTkTA2APNo" class="btn btn-primary" target="_blank"  role="button">
+            点击观看
+          </a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="course" align="center" >
+          <img src="images/44.png" class="img-responsive" alt="">
+          <a href="https://neets.cc/detail/5sjshAn5GWQoN7hFxjpazj" class="btn btn-primary" target="_blank"  role="button">
+            点击观看
+          </a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="course" align="center" >
+          <img src="images/55.png" class="img-responsive" alt="">
+          <a href="https://neets.cc/detail/215085b4e76b4b23b42e39d788b1afc9" class="btn btn-primary" target="_blank"  role="button">
+            点击观看
+          </a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="course" align="center" >
+          <img src="images/66.png" class="img-responsive" alt="">
+          <a href="https://neets.cc/detail/LyQr9FuAuuqTiWKBXnup4t" class="btn btn-primary" target="_blank"  role="button">
+            点击观看
+          </a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="course" align="center" >
+          <img src="images/77.png" class="img-responsive" alt="">
+          <a href="https://neets.cc/detail/LwuJBWgtcArybTHSG7WhRh" class="btn btn-primary" target="_blank"  role="button">
+            点击观看
+          </a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="course" align="center" >
+          <img src="images/88.png" class="img-responsive" alt="">
+          <a href="https://neets.cc/detail/6hfMqc8dYcA3ZVpFFEAYx5" class="btn btn-primary" target="_blank"  role="button">
+            点击观看
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!--app-->
+<section id="app">
+  <div class="container">
+    <div class="row  ">
+      <div class="col-md-6 wow tada "data-wow-iteration="2">
+        <h2>秦时明月之君临天下往季信息</h2>
+        <p>
+          网络动画《秦时明月之君临天下》是由沈乐平执导，杭州玄机科技信息技术有限公司出品的中国3D武侠动画《秦时明月》系列的第五部作品。
+          动画讲述了天明、少羽、石兰三人误打误撞登上了停泊在海边的蜃楼后开始了奇幻莫测的探险逃亡之旅的故事  。
+        </p>
+        <button class="btn1" >
+          <span class="glyphicon glyphicon-download-alt"></span>
+          <a href="http://www.llduang.com/91790.html" target="_blank">迅雷地址</a>
+        </button>
+        <button class="btn2">
+          <span class="glyphicon glyphicon-download-alt"></span>
+          <a href="https://zhidao.baidu.com/question/1696491878823702668.html" target="_blank">网盘地址</a>
+        </button>
+      </div>
+      <div class="col-md-6 wow jello">
+        <img src="images/app-banner.jpg" class="img-responsive" alt=""/>
+      </div>
+    </div>
+  </div>
+</section>
+<!--app-->
+
+<!--contact-->
+<section id="contact">
+  <div class="lvjing">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6  wow fadeInLeft">
+          <h2>
+            <span class="glyphicon glyphicon-send"></span>
+            &nbsp;
+            最新秦时资讯
+          </h2>
+          <p>
+            做中国动画，讲中国的侠。未来可期，与君相约，沧海横流！ ​​​​
+            沧海明珠月无缺，万江奔海化冬雪。
+            《秦时明月陆沧海横流》暖冬预告即将上线！
+            你们期待的终将化“雪”而来！
+            这个冬天，期待与你惊喜相逢的那天！玄机现在更新的是三部动画，武庚纪，天行九歌，斗罗大陆.
+            天行九歌第一季终，秦时明月新季可期！
+          </p>
+          <address>
+            <p>
+              <span class="glyphicon glyphicon-home"></span>
+              &nbsp;
+              地址:杭州玄机科技信息技术有限公司
+            </p>
+            <p>
+              <span class="glyphicon glyphicon-phone-alt"></span>
+              &nbsp;
+              联系电话：4006661551
+            </p>
+            <p>
+              <span class="glyphicon glyphicon-envelope"></span>
+              &nbsp;
+              邮箱:kefu@52qinshi.com
+            </p>
+          </address>
+        </div>
+        <div class="col-md-6  wow fadeInRight" >
+          <form action="#" method="post" role="form">
+            <!--当提交表单时，发送表单数据到名为 "#" 的文件-->
+                      <!--Bootstrap 表单  向父 <form> 元素添加 role="form"。
+                      把标签和控件放在一个带有 class .form-group 的 <div> 中。这是获取最佳间距所必需的。
+                      向所有的文本元素 <input>、<textarea> 和 <select> 添加 class ="form-control" 。
+                      placeholder 属性提供可描述输入字段预期值的提示信息（hint）。
+                      该提示会在输入字段为空时显示，并会在字段获得焦点时消失。-->
+                          <div  class="col-md-6">
+                              <input type="text" class="form-control" placeholder="您的姓名"/>
+                          </div>
+                          <div class="col-md-6">
+                              <input type="email" class="form-control" placeholder="您的邮箱"/>
+                          </div>
+                          <div class="col-md-12">
+                              <input type="text" class="form-control" placeholder="标题"/>
+                          </div>
+                          <div class="col-md-12">
+                              <textarea class="form-control" placeholder="留言内容" rows="4"></textarea>
+                            <!--想要显示placeholder里面的内容，中间必须不能有内容-->
+                          </div>
+                          <!--<textarea> 标签定义一个多行的文本框。文本区域中可容纳无限数量的文本
+           可以通过 cols 和 rows 属性来规定 textarea 的尺寸大小，不过更好的办法是使用 CSS 的 height 和 width 属性。-->
+                          <div class="col-md-8">
+                              <input type="submit" class="form-control" value="提交"/>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!--contact-->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          The Legend of Qin秦時明月。前5部正片(共175集)已完结;第6部上映中，敬请期待。
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--suppress JSUnresolvedLibraryURL -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!--js的下载和执行可能影响主页的内容。script标签放在body底部，不会影响首屏时间-->
+<!--放到body结束标签的末尾，无需担心因页面未完成加载，造成DOM节点获取不到，使脚本报错的问题
+而且能避免因脚本运行缓慢造成页面卡死的问题。-->
+<script src="js/jquery.singlePageNav.min.js"></script>
+<script src="js/wow.min.js"></script>
+
+<script>
+  /* $就是jquery对象，$()就是jQuery()，在里面可以传参数，作用就是获取元素*/
+  /* $.function();就是 选取 JQuery 定义的 function() 执行*/
+  /* jquery里面的$有查找，选取的意思,如$("#test")就是选取id为test的对象*/
+
+  $(function(){
+    /*导航跳转效果插件*/
+    $('.nav').singlePageNav({
+      offset:40/*此函数点击缓慢跳转*/ /*向上偏移量，原本是被覆盖导航条高度70，现在去掉*/
+    });
+
+    /*小屏幕导航点击关闭菜单,click点击时候执行方法*/
+    $('.navbar-collapse a').click(function(){
+      $('.navbar-collapse').collapse('hide');
+    });
+    new WOW().init();
+  })
+</script>
+
+</body>
+</html>
