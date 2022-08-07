@@ -39,6 +39,8 @@ window.onload = function () {
 
     // 放大预览的移入移出效果
     var BigImgIndex = 0; //全局变量 点击缩略图展示小图大图时要用
+    var ColorIndex = 0; //商品颜色索引 0黑 1银 2白 3蓝 4金
+    var storageIndex = 0; //存储容量索引 0 128G 1 256G 2 512G
     var imagesrc = goodData.imagesrc;
     bigClassBind();
     function bigClassBind() {
@@ -59,7 +61,7 @@ window.onload = function () {
             BigPic.id = "bigPic";
             // 创建大图片
             var BigImg = document.createElement('img');
-            BigImg.src = imagesrc[BigImgIndex].b;
+            BigImg.src = imagesrc[ColorIndex][BigImgIndex].b;
             // 追加元素
             BigPic.appendChild(BigImg);
             smallPic.appendChild(maskDiv);
@@ -99,21 +101,31 @@ window.onload = function () {
         }
 
     }
-
-    // 动态渲染放大镜缩略图的数据
+    // 动态渲染放大镜缩略图的数据 初次渲染
     DynamicPicData();
     function DynamicPicData() {
         /*1.先获取piclist元素下的ul
         2.再获取data.js文件下的goodData->imagesrc数组
         3.遍历数组根据数组的长度创建li元素*/
         var ul = document.querySelector('#wrap #content .contentMain #center #leftView #leftBottom #piclist ul');
-        for(let i=0; i<imagesrc.length;i++){
+        for(let i=0; i<imagesrc[ColorIndex].length;i++){
             let newLi = document.createElement('li');
             let newImg = document.createElement('img');
-            newImg.src = imagesrc[i].s;
+            newImg.src = imagesrc[ColorIndex][i].s;
             newLi.appendChild(newImg);
             ul.appendChild(newLi);
         }
+    }
+    // 点击商品颜色标签 改变缩略图的img路径
+    function ChangePiclist() {
+        let Piclist = document.querySelectorAll('#wrap #content .contentMain #center #leftView #leftBottom #piclist ul li img')
+        for(let i=0; i<imagesrc[ColorIndex].length;i++){
+            Piclist[i].src = imagesrc[ColorIndex][i].s
+        }
+    }
+    // 点击商品颜色标签 改变大图的img路径
+    function ChangBigPic() {
+        BigImgIndex = 0
     }
     // 点击缩略图切换小图框的展示图片
     DynamicPicClick();
@@ -124,15 +136,15 @@ window.onload = function () {
         // 获取li元素 缩略图 数组
         var liNodes = document.querySelectorAll('#wrap #content .contentMain #center #leftView #leftBottom #piclist ul li');
         var smallPic_img = document.querySelector('#wrap #content .contentMain #center #leftView #leftTop #smallPic img');
-        smallPic_img.src = goodData.imagesrc[0].b  // 默认小图框路径
+        smallPic_img.src = imagesrc[ColorIndex][0].b  // 默认小图框路径
         // 给每个li元素添加自定义下标
         for (let i = 0; i < liNodes.length; i++) {
-            liNodes[i].index = i;  // 012345 6个
+            liNodes[i].index = i;  // 0123456 7个
             liNodes[i].onmouseenter = function () {
                 let idx = this.index;
                 BigImgIndex = idx; // 对应大图框的图片也要跟着换
                 // 变换小图路径
-                smallPic_img.src = imagesrc[idx].b;
+                smallPic_img.src = imagesrc[ColorIndex][idx].b;
             }
         }
     }
@@ -172,8 +184,10 @@ window.onload = function () {
         3.建立一个字符串变量，将原来的布局结构贴近来，将所对应的数据放在对应的位置上重新渲染rightTop元素*/
         var rightTop = document.querySelector('#wrap #content .contentMain #center #rightView .rightTop');
         var goodsDetail = goodData.goodsDetail;
+        var phoneColor = goodData.phoneColor
+        var storage = goodData.storage
         // 模板字符串替换数据
-        let s = `<h3>${goodsDetail.title}</h3>
+        let s = `<h3>${goodsDetail.title}${storage[storageIndex]}${phoneColor[ColorIndex]}</h3>
                 <p>${goodsDetail.recommend}</p>
                 <div class="priceWrap">
                     <div class="priceTop">
@@ -244,7 +258,6 @@ window.onload = function () {
         let arr = new Array(dlNodes.length);
         arr.fill(0);  //[0,0,0,0] mark数组
         let choose = document.querySelector('#wrap #content .contentMain #center #rightView .rightBottom .choose');
-
         for(let i=0; i<dlNodes.length; i++){
             (function (i) {
                 let ddNodes = dlNodes[i].querySelectorAll('dd');
@@ -269,7 +282,7 @@ window.onload = function () {
                                 markDiv.innerText = value.innerText;
                                 let img = document.createElement('img')
                                 img.src = 'image/xicon.png';
-                                img.setAttribute('index',index); //index记录点击生成choose中块的下标索引
+                                img.setAttribute('index',String(index)); //index记录点击生成choose中块的下标索引
                                 // 表明这个mark标是属于哪个dl的 0 1 2 3
                                 markDiv.appendChild(img);
                                 choose.appendChild(markDiv);
@@ -284,6 +297,20 @@ window.onload = function () {
                                 let idx1 = this.getAttribute('index');
                                 //恢复数组中对应下标的元素
                                 arr[idx1] = 0;
+                                //重置下标为颜色0和存储容量1的内容
+                                if(idx1==='0'){
+                                    ColorIndex = 0
+                                    let goodName = document.querySelector('#wrap #content .contentMain #center #rightView .rightTop h3')
+                                    goodName.innerHTML = `${goodData.goodsDetail.title}${goodData.storage[storageIndex]}${goodData.phoneColor[ColorIndex]}`
+                                    ChangePiclist()
+                                    DynamicPicClick()
+                                    ChangBigPic()
+                                }
+                                if(idx1==='1'){
+                                    storageIndex = 0
+                                    let goodName = document.querySelector('#wrap #content .contentMain #center #rightView .rightTop h3')
+                                    goodName.innerHTML = `${goodData.goodsDetail.title}${goodData.storage[storageIndex]}${goodData.phoneColor[ColorIndex]}`
+                                }
                                 //查找对应下标的那个dl行中的所有dd元素
                                 let ddlist = dlNodes[idx1].querySelectorAll('dd');
                                 //遍历所有的dd
@@ -296,6 +323,45 @@ window.onload = function () {
                                 changePriceBind(arr);
                             }
                         }
+                        if(i===0){
+                            switch (this.innerText) {
+                                case '亮黑色':
+                                    ColorIndex = 0
+                                    break;
+                                case '冰霜银':
+                                    ColorIndex = 1
+                                    break;
+                                case '零度白':
+                                    ColorIndex = 2
+                                    break;
+                                case '深海蓝':
+                                    ColorIndex = 3
+                                    break;
+                                case '晨曦金':
+                                    ColorIndex = 4
+                                    break;
+                            }
+                            let goodName = document.querySelector('#wrap #content .contentMain #center #rightView .rightTop h3')
+                            goodName.innerHTML = `${goodData.goodsDetail.title}${goodData.storage[storageIndex]}${goodData.phoneColor[ColorIndex]}`
+                            ChangePiclist()
+                            DynamicPicClick()
+                            ChangBigPic()
+                        }
+                        if(i===1){
+                            switch (this.innerText) {
+                                case '128G':
+                                    storageIndex = 0
+                                    break;
+                                case '256G':
+                                    storageIndex = 1
+                                    break;
+                                case '512G':
+                                    storageIndex = 2
+                                    break;
+                            }
+                            let goodName = document.querySelector('#wrap #content .contentMain #center #rightView .rightTop h3')
+                            goodName.innerHTML = `${goodData.goodsDetail.title}${goodData.storage[storageIndex]}${goodData.phoneColor[ColorIndex]}`
+                        }
                     }
                 }
             })(i); //加立即执行，闭包函数 为了i j能在后续函数中正常调用
@@ -307,7 +373,7 @@ window.onload = function () {
          * 思路：
          * 1、获取价格的标签元素
          * 2、给每一个dd标签身上默认都设置一个自定义的属性，用来记录变化的价格
-         * 3、遍历arr数组，将dd元素身上的新变化的价格和已有的价格（5299）相加
+         * 3、遍历arr数组，将dd元素身上的新变化的价格和已有的价格（5988）相加
          * 4、最后将计算之后的结果重新渲染到p标签中
          */
             //1、原价格标签元素
@@ -433,7 +499,7 @@ window.onload = function () {
             }else{
                 //关闭
                 //  flag = true;
-                btns.className = "btns btnsClose"
+                btns.className = "btns btnsClose";
 
                 rightAside.className = "rightAside asideClose";
             }
