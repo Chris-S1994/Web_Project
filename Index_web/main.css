@@ -9,11 +9,15 @@ body{
 /*顶部切图展示*/
 .box-top1{background-color: rgba(0,0,0,0.4); width: 875px; height: 500px;/* margin-left:auto; margin-right: auto;*/
     overflow: hidden;position: relative; left: 50%; transform:translate(-50%,0)}
+.box-top1 .left_J{position: absolute;top: 200px;text-indent: -80px; opacity: 0.6}
+.box-top1 .left_J img{filter: drop-shadow(80px 0 #cccccc)}
+.box-top1 .right_J{position: absolute;right: 0;top: 205px;text-indent: -1000px; opacity: 0.6}
+.box-top1 .right_J img{filter: drop-shadow(920px 0 #cccccc)}
 
 #all-picture{height:480px;
     width: calc(875px * 5);/*如果加图片自行添加数目我这里5张图片所以宽度为5张图片横排的总尺寸，注意添加图片数目之后，动画内的参数也要相应的改变*/
     animation: switch ease 15s infinite ;z-index: 2;opacity: 0.7}
-#all-picture img{width:875px;height: 480px;float: left;}
+#all-picture .Bimg{width:875px;height: 480px;float: left;}
 #all-picture:hover{animation-play-state: paused;}
 @keyframes switch{/*每个图片切换有两个阶段：位移切换和静置。所以中间的效果可以任意定制，我这里在每个阶段切换时都有一定的时间来静置*/
     0%,10%{margin-left: 0;}
