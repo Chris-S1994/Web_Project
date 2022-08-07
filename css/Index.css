@@ -1,0 +1,808 @@
+#wrap #header {
+  margin-top: 40px;
+  position: relative;
+}
+#wrap #header .headTop {
+  position: fixed;
+  top: 0;
+  background: antiquewhite;
+  height: 40px;
+  width: 100%;
+  z-index: 10;
+}
+#wrap #header .headTop .headTopMain {
+  width: 1200px;
+  margin: 0 auto;
+  line-height: 40px;
+}
+#wrap #header .headTop .headTopMain::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#wrap #header .headTop .headTopMain .left {
+  float: left;
+}
+#wrap #header .headTop .headTopMain .left h5 {
+  float: left;
+  margin-right: 7px;
+}
+#wrap #header .headTop .headTopMain .left p {
+  float: left;
+}
+#wrap #header .headTop .headTopMain .left p a:first-child {
+  border-right: 1px solid lightseagreen;
+  margin-right: 1px;
+  padding-right: 5px;
+}
+#wrap #header .headTop .headTopMain .right {
+  float: right;
+}
+#wrap #header .headTop .headTopMain .right nav {
+  font-size: 0;
+}
+#wrap #header .headTop .headTopMain .right nav a {
+  margin-right: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  border-right: 1px solid lightseagreen;
+}
+#wrap #header .headTop .headTopMain .right nav a:last-child {
+  border: none;
+  margin-right: 0;
+  padding-right: 0;
+}
+#wrap #header .headBottom .headBottomMain {
+  width: 1200px;
+  margin: 0 auto;
+}
+#wrap #header .headBottom .headBottomMain::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#wrap #header .headBottom .headBottomMain .link1 {
+  height: 28px;
+  width: 130px;
+  background-color: lightseagreen;
+  text-align: center;
+  float: left;
+  margin-top: 37px;
+  margin-left: 15px;
+  margin-right: 30px;
+}
+#wrap #header .headBottom .headBottomMain .link1 a {
+  line-height: 28px;
+  color: whitesmoke;
+  font-size: 14px;
+}
+#wrap #header .headBottom .headBottomMain .link2 {
+  height: 28px;
+  width: 130px;
+  background-color: orange;
+  text-align: center;
+  float: left;
+  margin-top: 37px;
+}
+#wrap #header .headBottom .headBottomMain .link2 a {
+  line-height: 28px;
+  color: whitesmoke;
+  font-size: 14px;
+}
+#wrap #header .headBottom .headBottomMain .logo {
+  padding: 25px 45px;
+  float: left;
+}
+#wrap #header .headBottom .headBottomMain .logo a img {
+  width: 170px;
+  height: 66px;
+}
+#wrap #header .headBottom .headBottomMain .search {
+  float: right;
+  margin-top: 35px;
+}
+#wrap #header .headBottom .headBottomMain .search input:first-child {
+  box-sizing: border-box;
+  width: 490px;
+  height: 32px;
+  padding: 0 4px;
+  border: 3px solid seagreen;
+  float: left;
+  border-right: none;
+}
+#wrap #header .headBottom .headBottomMain .search input:last-child {
+  width: 68px;
+  height: 32px;
+  color: white;
+  background: seagreen;
+  letter-spacing: 2px;
+  border: none;
+  cursor: pointer;
+}
+#wrap #navWrap {
+  border-bottom: 2px solid orangered;
+}
+#wrap #navWrap .navWrapMain {
+  width: 1200px;
+  margin: 0 auto;
+}
+#wrap #navWrap .navWrapMain::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#wrap #navWrap .navWrapMain a {
+  margin: 0 22px;
+  font-size: 16px;
+  color: #333;
+  float: left;
+  line-height: 50px;
+}
+#wrap #navWrap .navWrapMain a:first-child {
+  width: 210px;
+  height: 50px;
+  background: orangered;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  float: left;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 1px;
+}
+#wrap #content .contentMain {
+  width: 1200px;
+  margin: 15px auto 0 auto;
+}
+#wrap #content .contentMain #navPath {
+  padding: 9px 15px 9px 0;
+  font-size: 0;
+}
+#wrap #content .contentMain #navPath a {
+  font-size: 14px;
+}
+#wrap #content .contentMain #navPath i {
+  padding: 0 5px;
+  font-size: 14px;
+}
+#wrap #content .contentMain #center {
+  margin: 5px 0 15px;
+}
+#wrap #content .contentMain #center::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#wrap #content .contentMain #center #leftView {
+  width: 400px;
+  float: left;
+}
+#wrap #content .contentMain #center #leftView #leftTop {
+  width: 400px;
+  position: relative;
+}
+#wrap #content .contentMain #center #leftView #leftTop #smallPic {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #dfdfdf;
+  position: relative;
+}
+#wrap #content .contentMain #center #leftView #leftTop #smallPic img {
+  width: 400px;
+  height: 400px;
+}
+#wrap #content .contentMain #center #leftView #leftTop #smallPic .mask {
+  width: 200px;
+  height: 200px;
+  background: rgba(250, 250, 250, 0.5);
+  border: 1px solid #dddddd;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#wrap #content .contentMain #center #leftView #leftTop #bigPic {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #dddddd;
+  background: white;
+  position: absolute;
+  left: 420px;
+  top: 0;
+  overflow: hidden;
+  z-index: 9;
+}
+#wrap #content .contentMain #center #leftView #leftTop #bigPic img {
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#wrap #content .contentMain #center #leftView #leftBottom {
+  width: 398px;
+  height: 67px;
+  padding: 3px 0;
+  margin-top: 5px;
+  border: 2px solid grey;
+  overflow: hidden;
+}
+#wrap #content .contentMain #center #leftView #leftBottom a {
+  width: 10px;
+  height: 64px;
+  border: 1px solid #cccccc;
+  background: #ebebeb;
+  text-align: center;
+  line-height: 64px;
+  float: left;
+}
+#wrap #content .contentMain #center #leftView #leftBottom a:first-child {
+  margin-right: 4px;
+}
+#wrap #content .contentMain #center #leftView #leftBottom a:hover {
+  cursor: pointer;
+  background: palegoldenrod;
+}
+#wrap #content .contentMain #center #leftView #leftBottom #piclist {
+  width: 370px;
+  height: 66px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+#wrap #content .contentMain #center #leftView #leftBottom #piclist ul {
+  white-space: nowrap;
+  font-size: 0;
+  position: absolute;
+  left: 0;
+  transition: left 0.4s;
+}
+#wrap #content .contentMain #center #leftView #leftBottom #piclist ul li {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #cccccc;
+  padding: 2px;
+  margin-right: 20px;
+  display: inline-block;
+}
+#wrap #content .contentMain #center #leftView #leftBottom #piclist ul li img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+#wrap #content .contentMain #center #leftView #leftBottom #piclist ul li:hover {
+  border: 1px solid orangered;
+}
+#wrap #content .contentMain #center #rightView {
+  width: 700px;
+  float: right;
+}
+#wrap #content .contentMain #center #rightView .rightTop h3 {
+  font-size: 15px;
+  line-height: 22px;
+  margin-top: 10px;
+}
+#wrap #content .contentMain #center #rightView .rightTop > p {
+  color: #e12228;
+  margin-top: 15px;
+}
+#wrap #content .contentMain #center #rightView .rightTop .priceWrap {
+  margin-top: 10px;
+  line-height: 28px;
+  background: #fee9ec;
+  padding: 7px;
+}
+#wrap #content .contentMain #center #rightView .rightTop .priceWrap .priceTop::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#wrap #content .contentMain #center #rightView .rightTop .priceWrap .priceTop > span {
+  margin-right: 15px;
+  float: left;
+}
+#wrap #content .contentMain #center #rightView .rightTop .priceWrap .priceTop .price {
+  float: left;
+  color: #cc1122;
+}
+#wrap #content .contentMain #center #rightView .rightTop .priceWrap .priceTop .price > span {
+  font-size: 16px;
+  float: left;
+}
+#wrap #content .contentMain #center #rightView .rightTop .priceWrap .priceTop .price p {
+  font-size: 24px;
+  float: left;
+  font-weight: bold;
+  margin-right: 4px;
+}
+#wrap #content .contentMain #center #rightView .rightTop .priceWrap .priceTop .price i {
+  font-size: 12px;
+  color: #cc1122;
+  float: left;
+}
+#wrap #content .contentMain #center #rightView .rightTop .priceWrap .priceTop > p {
+  float: right;
+}
+#wrap #content .contentMain #center #rightView .rightTop .priceWrap .priceBottom {
+  margin-top: 5px;
+}
+#wrap #content .contentMain #center #rightView .rightTop .priceWrap .priceBottom::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#wrap #content .contentMain #center #rightView .rightTop .priceWrap .priceBottom > span {
+  float: left;
+  margin-right: 15px;
+}
+#wrap #content .contentMain #center #rightView .rightTop .priceWrap .priceBottom p {
+  width: 520px;
+  line-height: 28px;
+  float: left;
+}
+#wrap #content .contentMain #center #rightView .rightTop .priceWrap .priceBottom p > span {
+  color: #999999;
+}
+#wrap #content .contentMain #center #rightView .rightTop .priceWrap .priceBottom p > span:first-child {
+  background: #c81623;
+  padding: 3px;
+  color: #ffffff;
+}
+#wrap #content .contentMain #center #rightView .rightTop .support {
+  margin-top: 10px;
+  line-height: 28px;
+}
+#wrap #content .contentMain #center #rightView .rightTop .support::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#wrap #content .contentMain #center #rightView .rightTop .support > span {
+  margin-right: 15px;
+  float: left;
+}
+#wrap #content .contentMain #center #rightView .rightTop .support > p {
+  float: left;
+  color: #999999;
+}
+#wrap #content .contentMain #center #rightView .rightTop .address {
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  line-height: 28px;
+}
+#wrap #content .contentMain #center #rightView .rightTop .address::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#wrap #content .contentMain #center #rightView .rightTop .address > span {
+  letter-spacing: 5px;
+  margin-right: 10px;
+  float: left;
+}
+#wrap #content .contentMain #center #rightView .rightTop .address > p {
+  float: left;
+  color: #999999;
+}
+#wrap #content .contentMain #center #rightView .rightBottom {
+  margin-top: 10px;
+  line-height: 28px;
+}
+#wrap #content .contentMain #center #rightView .rightBottom .choose::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#wrap #content .contentMain #center #rightView .rightBottom .choose .mark {
+  height: 30px;
+  background: snow;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  padding: 0 30px 0 20px;
+  margin-right: 20px;
+  text-align: center;
+  line-height: 30px;
+  position: relative;
+  float: left;
+}
+#wrap #content .contentMain #center #rightView .rightBottom .choose .mark img {
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  right: 1px;
+  top: 3px;
+}
+#wrap #content .contentMain #center #rightView .rightBottom .choose .mark img:hover {
+  cursor: pointer;
+}
+#wrap #content .contentMain #center #rightView .rightBottom .chooseWrap dl {
+  margin-top: 10px;
+  margin-bottom: 13px;
+}
+#wrap #content .contentMain #center #rightView .rightBottom .chooseWrap dl::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#wrap #content .contentMain #center #rightView .rightBottom .chooseWrap dl dt {
+  margin-right: 15px;
+  float: left;
+  line-height: 28px;
+}
+#wrap #content .contentMain #center #rightView .rightBottom .chooseWrap dl dd {
+  margin-right: 5px;
+  color: #666666;
+  line-height: 24px;
+  padding: 2px 14px;
+  border: 1px solid darkgray;
+  border-radius: 4px;
+  float: left;
+}
+#wrap #content .contentMain #center #rightView .rightBottom .chooseWrap dl dd:first-of-type {
+  color: orangered;
+  border: 1px solid red;
+}
+#wrap #content .contentMain #center #rightView .rightBottom .chooseWrap dl dd:hover {
+  cursor: pointer;
+}
+#wrap #content .contentMain #center #rightView .rightBottom .addCart::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#wrap #content .contentMain #center #rightView .rightBottom .addCart .count {
+  width: 56px;
+  margin-right: 15px;
+  position: relative;
+  float: left;
+}
+#wrap #content .contentMain #center #rightView .rightBottom .addCart .count input {
+  width: 39px;
+  height: 34px;
+  border: 1px solid #ddd;
+  color: #555;
+  text-align: center;
+}
+#wrap #content .contentMain #center #rightView .rightBottom .addCart .count a {
+  width: 15px;
+  height: 17px;
+  color: #666;
+  background: #f1f1f1;
+  position: absolute;
+  right: 1px;
+  text-align: center;
+  line-height: 18px;
+  border: 1px solid #ddd;
+}
+#wrap #content .contentMain #center #rightView .rightBottom .addCart .count a:first-child {
+  top: 0;
+}
+#wrap #content .contentMain #center #rightView .rightBottom .addCart .count a:last-child {
+  top: 18px;
+  border-top: none;
+}
+#wrap #content .contentMain #center #rightView .rightBottom .addCart .count a:hover {
+  cursor: pointer;
+}
+#wrap #content .contentMain #center #rightView .rightBottom .addCart button {
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 36px;
+  font-size: 16px;
+  background: #e1251b;
+  color: #fff;
+  border: none;
+  float: left;
+  cursor: pointer;
+}
+#wrap #content .contentMain .goodsDetailWrap {
+  width: 1200px;
+  margin: 30px auto 0;
+}
+#wrap #content .contentMain .goodsDetailWrap::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#wrap #content .contentMain .goodsDetailWrap .leftAside {
+  width: 220px;
+  border: 1px solid #ccc;
+  float: left;
+}
+#wrap #content .contentMain .goodsDetailWrap .leftAside::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#wrap #content .contentMain .goodsDetailWrap .leftAside .asideTop::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#wrap #content .contentMain .goodsDetailWrap .leftAside .asideTop h3 {
+  width: 110px;
+  height: 40px;
+  background: #fff;
+  float: left;
+  text-align: center;
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+  border-top: 3px solid #fff;
+}
+#wrap #content .contentMain .goodsDetailWrap .leftAside .asideTop h3.active {
+  border-top: 3px solid #e1251b;
+  width: 110px;
+  line-height: 37px;
+  text-align: center;
+  line-height: 40px;
+  border-bottom: none;
+}
+#wrap #content .contentMain .goodsDetailWrap .leftAside .asideTop h3:hover {
+  cursor: pointer;
+}
+#wrap #content .contentMain .goodsDetailWrap .leftAside .aslideContent {
+  padding: 10px;
+}
+#wrap #content .contentMain .goodsDetailWrap .leftAside .aslideContent div {
+  display: none;
+}
+#wrap #content .contentMain .goodsDetailWrap .leftAside .aslideContent div.active {
+  display: block;
+}
+#wrap #content .contentMain .goodsDetailWrap .leftAside .aslideContent div.active ul.goodslist1 li {
+  width: 50%;
+  border-bottom: 1px dashed #ededed;
+  line-height: 28px;
+  float: left;
+}
+#wrap #content .contentMain .goodsDetailWrap .leftAside .aslideContent div.active ul.goodslist2 {
+  margin: 5px 0 15px;
+}
+#wrap #content .contentMain .goodsDetailWrap .leftAside .aslideContent div.active ul.goodslist2 li {
+  border-bottom: 1px solid #ededed;
+}
+#wrap #content .contentMain .goodsDetailWrap .leftAside .aslideContent div.active ul.goodslist2 li img {
+  width: 152px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#wrap #content .contentMain .goodsDetailWrap .leftAside .aslideContent div.active ul.goodslist2 li p {
+  font-size: 16px;
+  color: orangered;
+}
+#wrap #content .contentMain .goodsDetailWrap .leftAside .aslideContent div.active ul.goodslist2 li .button {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+#wrap #content .contentMain .goodsDetailWrap .leftAside .aslideContent div.active ul.goodslist2 li .button a {
+  color: #8c8c8c;
+  padding: 2px 14px;
+  line-height: 18px;
+  border: 1px solid #8c8c8c;
+  background: honeydew;
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail {
+  width: 970px;
+  float: left;
+  margin-left: 8px;
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail .chooseBox {
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail .chooseBox h3 {
+  border-bottom: 1px solid #ddd;
+  background: #f1f1f1;
+  color: #333;
+  padding: 5px 0 5px 15px;
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail .chooseBox .listWrap {
+  height: 170px;
+  padding-top: 10px;
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail .chooseBox .listWrap .left {
+  width: 127px;
+  height: 165px;
+  position: relative;
+  float: left;
+  text-align: center;
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail .chooseBox .listWrap .left img {
+  width: 87px;
+  margin: 0 auto;
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail .chooseBox .listWrap .left p {
+  color: #c81623;
+  font-size: 16px;
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail .chooseBox .listWrap .left i {
+  position: absolute;
+  top: 48px;
+  right: -25px;
+  font-size: 16px;
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail .chooseBox .listWrap .middle {
+  width: 668px;
+  height: 165px;
+  float: left;
+  text-align: center;
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail .chooseBox .listWrap .middle li {
+  width: 127px;
+  margin-left: 20px;
+  margin-right: 20px;
+  float: left;
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail .chooseBox .listWrap .middle li img {
+  width: 120px;
+  height: 130px;
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail .chooseBox .listWrap .right {
+  border-left: 1px solid #ddd;
+  float: left;
+  width: 143px;
+  height: 165px;
+  padding-left: 20px;
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail .chooseBox .listWrap .right div {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail .chooseBox .listWrap .right p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail .chooseBox .listWrap .right i {
+  color: #b1191a;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail .chooseBox .listWrap .right button {
+  padding: 10px 25px;
+  font-size: 16px;
+  color: #fff;
+  background: #e1251b;
+  border: none;
+  cursor: pointer;
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail .BottomDetail .tabBtns {
+  background: #ededed;
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail .BottomDetail .tabBtns::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail .BottomDetail .tabBtns li {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  background: #fff;
+  height: 40px;
+  padding-left: 11px;
+  padding-right: 11px;
+  float: left;
+  text-align: center;
+  line-height: 40px;
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail .BottomDetail .tabBtns li.active {
+  background: red;
+  border-left: 1px solid #ddd;
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail .BottomDetail .tabBtns li.active a {
+  color: #fff;
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail .BottomDetail .tabContents div {
+  padding-left: 20px;
+  line-height: 30px;
+  display: none;
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail .BottomDetail .tabContents div.active {
+  margin: 10px 0;
+  display: block;
+}
+#wrap #content .contentMain .goodsDetailWrap .rightDetail .BottomDetail .tabContents div.active img {
+  width: 950px;
+}
+#wrap .rightAside {
+  width: 300px;
+  height: 100%;
+  background: #7a6e6e;
+  transition: 0.5s;
+  position: fixed;
+  top: 0;
+}
+#wrap .rightAside.asideClose {
+  right: -294px;
+}
+#wrap .rightAside.asideOpen {
+  right: 0;
+}
+#wrap .rightAside .btns {
+  width: 35px;
+  height: 35px;
+  background: #7a6e6e;
+  border-radius: 5px 0 0 5px;
+  left: -29px;
+  background-size: 35px 35px;
+  position: absolute;
+  top: 40px;
+}
+#wrap .rightAside .btns.btnsClose {
+  background-image: url('../image/list.png');
+}
+#wrap .rightAside .btns.btnsOpen {
+  background-image: url('../image/cross.png');
+}
+#wrap .rightAside .content {
+  width: 294px;
+  background: bisque;
+  position: absolute;
+  left: 6px;
+  top: 0;
+  bottom: 0;
+  z-index: 50;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 200px;
+}
+#wrap .rightAside .navlist {
+  position: absolute;
+  left: -29px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#wrap .rightAside .navlist li {
+  width: 35px;
+  height: 35px;
+  position: relative;
+}
+#wrap .rightAside .navlist li p {
+  width: 35px;
+  height: 35px;
+  background-color: #7a6e6e;
+  background-image: url('../image/toolbars.png');
+  background-position: -87px -174px;
+  transition: 0.5s;
+}
+#wrap .rightAside .navlist li i {
+  width: 62px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  position: absolute;
+  left: 35px;
+  transition: 0.5s;
+  top: 0;
+  background: #7a6e6e;
+}
+#wrap .rightAside .navlist li:hover p {
+  background-color: pink;
+}
+#wrap .rightAside .navlist li:hover i {
+  background-color: pink;
+  left: -62px;
+}
+#wrap hr {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #050505;
+}
+#wrap #footer {
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 875px;
+  text-align: center ;
+  color: #050505;
+  font-family: Arial;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+/*# sourceMappingURL=Index.css.map */
